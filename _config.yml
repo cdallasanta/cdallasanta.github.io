@@ -1,11 +1,11 @@
 # Site settings
 author: Chris Dalla Santa
-title: 
+title: Coding Dad
 header-img: img/home-bg.png
 email: chris.dallasanta@gmail.com
 copyright_name: Chris Dalla Santa
 description: > # this means to ignore newlines until "baseurl:"
-  
+  Naptime learning sessions!
 baseurl: "" # the subpath of your site, e.g. /blog
 twitter_username: 
 github_username:  cdallasanta
