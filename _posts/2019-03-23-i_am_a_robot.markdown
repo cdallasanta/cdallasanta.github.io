@@ -10,15 +10,13 @@ I was very excited for my cli project, which would be scraping zillow.com for pr
 
 ```Please verify you're a human to contine.
 
-```
 
 I was caught by a captcha. I vaguely knew that captchas served a purpose somewhere in the world, and unknowingly, I have become that purpose. In talking with my project advisor, we looked at something I've never heard of, the robots.txt file. Every webpage out there has one, you just add "/robots.txt" to the end of the url's main page.
 
 ```zillow.com/robots.txt
 
-google.com/robots.txt
+```google.com/robots.txt
 
-facebook.com/robots.txt
-```
+```facebook.com/robots.txt
 
 Right there in that file, under user-agent: * (everyone), homedetail was disallowed, as well as pretty much everything, it seems. So, no dice for a robot finding a house for me this time. Redfin, Trulia, Rent.com, all the same. I suppose not having people's addresses, house values, blueprints, contact info, and so much more available for the inevitable CLI uprisings makes sense. But now we know! Robots are everywhere.
