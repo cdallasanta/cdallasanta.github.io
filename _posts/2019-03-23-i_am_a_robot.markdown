@@ -17,9 +17,7 @@ I was caught by a captcha. I vaguely knew that captchas served a purpose somewhe
 
 ```
 zillow.com/robots.txt
-
 google.com/robots.txt
-
 facebook.com/robots.txt
 ```
 
