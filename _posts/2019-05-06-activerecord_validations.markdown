@@ -11,9 +11,11 @@ permalink:  activerecord_validations
 This lists all of the validations that AR can do behind the scenes for us. We saw `validates_presence_of` in the labs, but there is so, so much more in there.
 
 Validating format in case you need the input to only be an integer or to not include spaces:
+
 `validates :email, format: { with: /\A\S+\z/,    message: "no spaces allowed" }`
 
 Validating uniqueness in the table to have unique usernames:
+
 `validates :username, uniqueness: true`
 
 And you can set a custom error message for each of these, with different amounts of dynamacy:
