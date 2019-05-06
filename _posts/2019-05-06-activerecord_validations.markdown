@@ -1,7 +1,7 @@
 ---
 layout: post
 title:      "ActiveRecord Validations"
-date:       2019-05-06 19:34:01 +0000
+date:       2019-05-06 15:34:02 -0400
 permalink:  activerecord_validations
 ---
 
@@ -23,9 +23,12 @@ validates :email, presence: { message: "you must supply an email" }`
 
 validates :age, format: { with: /\A[^\D]+\z/,    message: "%{value} is not a valid age" }`
 
-validates :username, uniqueness: { message: ->(object, data) do
-    "Hey #{object.name}!, #{data[:value]} is taken already!
-		end}
+validates :username,
+  uniqueness: {
+    message: ->(object, data) do
+      "Hey #{object.name}!, #{data[:value]} is taken already!
+    end
+  }
 ```
 
 In that last example, `object` is the object the validation is running on (in this case, the instance of User), and data is a hash withe the following data: `{ model: "User", attribute: "username", value: <whatever they put in> }`.
