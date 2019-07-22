@@ -19,9 +19,9 @@ Again, using my inspections model as an example, with the attributes of `id` and
 ```
 class InspectionSerializer < ActiveModel::Serializer
   attributes :id, :complete?, :arbitrary_message
-	
-	def arbitrary_message
-	  "Hello!"
+ 
+  def arbitrary_message
+    "Hello!"
   end
 end
 ```
@@ -30,8 +30,8 @@ This would then give us the following JSON when it's rendered:
 ```
 {
   id: 1,
-	complete?: true,
-	arbitrary_message: "Hello!"
+  complete?: true,
+  arbitrary_message: "Hello!"
 }
 ```
 
@@ -40,9 +40,9 @@ Even though my model doesn't have an `arbitrary_message` attribute, I was still 
 ```
 class InspectionSerializer < ActiveModel::Serializer
   attributes :id, :complete?, :alert
-	
+  
   def alert
-      ApplicationController.new.render_to_string(partial: 'application/errors', locals: {object: object, alert_type: "alert-success"})
+    ApplicationController.new.render_to_string(partial: 'application/errors', locals: {object: object, alert_type: "alert-success"})
   end
 end
 ```
