@@ -1,7 +1,7 @@
 ---
 layout: post
 title:      "Yet Another Thunk Tutorial"
-date:       2019-08-14 19:31:14 +0000
+date:       2019-08-14 15:31:15 -0400
 permalink:  yet_another_thunk_tutorial
 ---
 
