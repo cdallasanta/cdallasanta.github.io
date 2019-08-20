@@ -84,7 +84,7 @@ export function doSoMuch() {
 }
 ```
 
-This can be accomplished in other ways, such as calling each of these in your controller, or setting up in your reducer that "RESET_GAME" accomplishes all of these, but this is another way you can organize your code.
+This can be accomplished in other ways, such as calling each of these in your component, or setting up in your reducer a case "RESET_GAME" accomplishes all of these, but this is another way you can organize your code.
 
 ## Fetch and async calls
 With thunk, your actions can return a `Promise`, which I interpret in my head as the computer saying "Hey, js client, I *promise* you I will keep working on this thing (such as a fetch call), but you go on with your code and I'll get back to you soon." Once the promise resolves, you can do follow up actions with `.then()`. For example:
