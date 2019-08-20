@@ -76,7 +76,7 @@ The function also received `dispatch` as an argument, so you can call several di
 
 ```
 export function doSoMuch() {
-  return dispatch () => {
+  return dispatch => {
     dispatch({type: "RESET_STATE});
     dispatch({type: "NEW_GAME"});
     dispatch({type: "FIRST_TURN"});
