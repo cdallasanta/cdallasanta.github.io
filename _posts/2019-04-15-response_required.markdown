@@ -1,7 +1,7 @@
 ---
 layout: post
 title:      "Response Required"
-date:       2019-04-15 20:29:49 +0000
+date:       2019-04-15 16:29:50 -0400
 permalink:  response_required
 ---
 
@@ -11,6 +11,14 @@ I was working on a side project, trying to convert one of my current favorite bo
 ```
 def on_entry
   #do nothing
+end
+
+def on_destruction
+  #do nothing
+end
+
+def on_activation
+  player.deal_damage(2)
 end
 ```
 
