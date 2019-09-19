@@ -1,7 +1,7 @@
 ---
 layout: post
 title:      "Heroku Errors Compilation (and their solutions)"
-date:       2019-09-16 16:53:41 +0000
+date:       2019-09-16 12:53:42 -0400
 permalink:  heroku_errors_compilation_and_their_solutions
 ---
 
@@ -34,6 +34,17 @@ Restart (or start in the first place), the postgre server with `sudo service pos
 Thank you [TablePlus](https://tableplus.com/blog/2018/10/how-to-start-stop-restart-postgresql-server.html)
 
 -------------------------------------------------------------
+### How to reset a database on heroku?
+
+
+`heroku restart && heroku pg:reset DATABASE --confirm APP-NAME && heroku run rake db:migrate`
+(note the APP-NAME)
+
+Thank you [zulhfreelancer and jgigault](https://gist.github.com/zulhfreelancer/ea140d8ef9292fa9165e)
+
+-------------------------------------------------------------
+
+
 ### Blank Page (but a successful deploy)
 #### Scripts are not properly set up
 
