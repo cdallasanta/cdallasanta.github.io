@@ -12,7 +12,7 @@ When doing a google image search for "thunk", the first image that popped up for
 
 Which really sums up my process in trying to understand this tool.
 
-Thunks are pretty powerful, and deserve a lot more than our half of a readme. I ended up doing some reading on the topic, and hopefully I can synthasize some useful information for y'all. At the very least, writing it all down here will help cement it in my mind. I gained a lot from [this article](https://medium.com/@stowball/a-dummys-guide-to-redux-and-thunk-in-react-d8904a7005d3) from medium.com and Dave Ceddia's "[What the heck is a thunk?](https://daveceddia.com/what-is-a-thunk/)".
+Thunks are pretty powerful, and deserve a lot more than the half of a readme my school's curriculum had. I ended up doing some reading on the topic, and hopefully I can synthesize some useful information for y'all. At the very least, writing it all down here will help cement it in my mind. I gained a lot from [this article](https://medium.com/@stowball/a-dummys-guide-to-redux-and-thunk-in-react-d8904a7005d3) from medium.com and Dave Ceddia's "[What the heck is a thunk?](https://daveceddia.com/what-is-a-thunk/)".
 
 At a very basic level, Thunk lets us do one thing differently: Our action creators can return a *funtion* instead of an object. While I am sure there are *many* uses for a thunk I haven't discovered, I am going to cover three that were a huge benefit to my React/Redux project: getState(), multiple dispatches, and async fetch calls.
 
