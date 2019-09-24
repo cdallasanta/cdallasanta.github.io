@@ -25,10 +25,13 @@ validates :username, uniqueness: true
 And you can set a custom error message for each of these, with different amounts of dynamacy:
 
 ```
+# checks the resence of the email attribute, with a default message
 validates :email, presence: { message: "you must supply an email" }`
 
-validates :age, format: { with: /\A[^\D]+\z/,    message: "%{value} is not a valid age" }`
+# check the format of the age attribute, with a slightly customized message
+validates :age, format: { with: /\A[^\D]+\z/, message: "%{value} is not a valid age" }`
 
+# checks to make sure the username isn't used already, with a very customized message
 validates :username,
   uniqueness: {
     message: ->(object, data) do
@@ -37,6 +40,6 @@ validates :username,
   }
 ```
 
-In that last example, `object` is the object the validation is running on (in this case, the instance of User), and data is a hash withe the following data: `{ model: "User", attribute: "username", value: <whatever they put in> }`.
+In that last example, `object` is the object the validation is running on (in this case, the instance of User), and data is a hash with the following data: `{ model: "User", attribute: "username", value: <whatever they put in> }`.
 
 All of these messages can then be access by your flash messages, leading to some very informative error messages! Enjoy!
