@@ -42,7 +42,7 @@ export function drawCard() {
     if (wholeState.deck.length > 0) {
       dispatch({
         type: "DRAW_CARD",
-        newBird: wholeState.deck[0]
+        newCard: wholeState.deck[0]
       });
     }
   };
@@ -92,10 +92,11 @@ With thunk, your actions can return a `Promise`, which I interpret in my head as
 ```
 export function getGames() {
   return dispatch => {
-    dispatch({type:"LOADING_SCORES"})
+    dispatch({type:"LOADING_SCORES"})  // maybe sets the text of the component as "Loading"
     fetch('http://localhost:3001/api/high_scores')
       .then(resp => resp.json())
       .then(scores => dispatch({type:"SET_SCORES", payload: scores}))
+			  // once it has the scores, it replaces "Loading" with the data
   }
 }
 ```
