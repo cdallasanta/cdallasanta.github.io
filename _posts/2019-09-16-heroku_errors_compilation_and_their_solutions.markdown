@@ -26,6 +26,7 @@ Without further ado, here we go!
 From Heroku's own [site](https://devcenter.heroku.com/articles/creating-apps)
 
 -------------------------------------------------------------
+
 ### PG::ConnectionBad
 #### Postgres is not up and running
 
@@ -34,6 +35,7 @@ Restart (or start in the first place), the postgre server with `sudo service pos
 Thank you [TablePlus](https://tableplus.com/blog/2018/10/how-to-start-stop-restart-postgresql-server.html)
 
 -------------------------------------------------------------
+
 ### How to reset a database on heroku?
 
 
@@ -43,7 +45,6 @@ Thank you [TablePlus](https://tableplus.com/blog/2018/10/how-to-start-stop-resta
 Thank you [zulhfreelancer and jgigault](https://gist.github.com/zulhfreelancer/ea140d8ef9292fa9165e)
 
 -------------------------------------------------------------
-
 
 ### Blank Page (but a successful deploy)
 #### Scripts are not properly set up
@@ -62,6 +63,19 @@ In the top-level package.json, include the following:
 I lost the page that gave me this tip, unfortunately.
 
 -------------------------------------------------------------
+
+### Uglifier::Error: Unexpected token: operator (>). To use ES6 syntax, harmony mode must be enabled with Uglifier.new(:harmony => true).
+#### Uglifier doesn't like ES6
+
+Change the js_compressor to what's below:
+```ruby
+# config/environments/production.rb
+config.assets.js_compressor = Uglifier.new(harmony: true)
+```
+
+-------------------------------------------------------------
+
+
 ### sh: 1: react-scripts: Permission denied heroku
 #### I couldn't find the precise cause because I did a lot to try and fix it. Next time I get it, I can narrow this down
 
