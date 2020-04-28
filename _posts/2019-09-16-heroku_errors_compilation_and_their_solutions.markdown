@@ -83,7 +83,8 @@ What eventually worked:
 
 Add all of the client's dependencies to the top level package.json. E.g.:
 
-```  "dependencies": {
+```
+  "dependencies": {
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
     "react-scripts": "^2.1.8"
@@ -112,3 +113,21 @@ As a possible resource, I referenced [this](https://stackoverflow.com/questions/
 #### This error was in the build log, after - Running: rake assets:precompile
 
 [Install yarn](https://yarnpkg.com/lang/en/docs/install/#windows-stable).
+
+-------------------------------------------------------------
+### Heroku not showing the most updated front end
+#### Need to build client and serve it from the public folder
+
+In top level, package.json should have:
+
+```
+  "scripts": {
+    "start": "react-scripts start",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "cd client && npm install && npm run build && cd ..",
+    "deploy": "cp -a client/build/. public/",
+    "postinstall": "npm run build && npm run deploy && echo 'Client built!'"
+  },
+```
+
+Then run `npm run postinstall`
